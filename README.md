@@ -6,8 +6,8 @@ A C# Library to make C# development life easier.
 There are two ways setup this library.
 
 **Download Harasoft.dll** [Recommended]
-- To download and install Blitzbit this way, simply check the releases on this page, and download the latest `dll`.
-- [Blitzbit Releases](https://github.com/harroo/Blitzbit/releases)
+- To download and install Harasoft this way, simply check the releases on this page, and download the latest `dll`.
+- [Harasoft Releases](https://github.com/harroo/Harasoft/releases)
 
 **Compile Harasoft.dll**
 - Clone this repository and once in the Root-Directory, run `make`.
