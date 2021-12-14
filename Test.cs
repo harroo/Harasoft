@@ -8,6 +8,7 @@ public static class TestProgram {
     public static void Main (string[] args) {
 
         Console.WriteLine("Testing::  Logging"); TestLogging();
+        Console.WriteLine("Testing::  SplitString"); SplitString();
 
         Console.WriteLine("Tests concluded.");
     }
@@ -22,5 +23,16 @@ public static class TestProgram {
         Logging.Log("SENDER VALUE CUSTOMTHINGthing", "custom sender test, successfu;l if u can see ");
 
         Logging.StopLog();
+    }
+
+    public static void SplitString () {
+
+        string test = "jimyHisHasdashdH1H2H2H lol    H :}";
+
+        Console.WriteLine("SRTING: " + test);
+        Console.WriteLine("splitting at H char");
+
+        foreach (string s in Misc.SplitString(test, 'H'))
+            Console.WriteLine(s);
     }
 }
