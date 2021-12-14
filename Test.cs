@@ -9,6 +9,7 @@ public static class TestProgram {
 
         Console.WriteLine("Testing::  Logging"); TestLogging();
         Console.WriteLine("Testing::  SplitString"); SplitString();
+        Console.WriteLine("Testing::  Timers"); Timers();
 
         Console.WriteLine("Tests concluded.");
     }
@@ -34,5 +35,16 @@ public static class TestProgram {
 
         foreach (string s in Misc.SplitString(test, 'H'))
             Console.WriteLine(s);
+    }
+
+    public static void Timers () {
+
+        Timer.Start(69);
+
+        System.Threading.Thread.Sleep(123);
+
+        double ms = Timer.Stop(69);
+
+        Console.WriteLine(ms.ToString());
     }
 }
