@@ -10,6 +10,7 @@ public static class TestProgram {
         Console.WriteLine("Testing::  Logging"); TestLogging();
         Console.WriteLine("Testing::  SplitString"); SplitString();
         Console.WriteLine("Testing::  Timers"); Timers();
+        Console.WriteLine("Testing::  Serialization"); SerializationTest();
 
         Console.WriteLine("Tests concluded.");
     }
@@ -46,5 +47,25 @@ public static class TestProgram {
         double ms = Timer.Stop(69);
 
         Console.WriteLine(ms.ToString());
+    }
+
+    public static void SerializationTest () {
+
+        TestClass ts = new TestClass();
+        ts.text = "this is a message";
+        ts.x = 69420;
+
+        byte[] data = Serialization.Serialize(ts);
+
+        TestClass y = (TestClass)Serialization.Deserialize(data);
+
+        Console.WriteLine(y.x.ToString() + ": " + y.text);
+    }
+
+    [Serializable]
+    public class TestClass {
+
+        public string text;
+        public int x;
     }
 }

@@ -57,3 +57,13 @@ double ms = Timer.Stop(22);
 Console.WriteLine(ms.ToString());
 ```
 Note: This will be within 1 or 2 milliseconds of accuracy.
+
+## `Harasoft.Serialization`
+```cs
+// Serialize an object.
+byte[] data = Serialization.Serialize(className);
+
+// De-serialize an object.
+ClassName className = (ClassName)Serialization.Deserialize(data);
+```
+Works with ANYthing.
