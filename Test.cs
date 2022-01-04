@@ -14,7 +14,7 @@ public static class TestProgram {
         Console.WriteLine("\nTesting::  Encryption"); EncryptionTest();
         Console.WriteLine("\nTesting::  Hashing"); HashingTest();
 
-        Console.WriteLine("Tests concluded.");
+        Console.WriteLine("\n\nTests concluded.");
     }
 
     public static void TestLogging () {
@@ -83,7 +83,10 @@ public static class TestProgram {
     public static void HashingTest () {
 
         string value = "hi im a secret message";
+        Console.WriteLine(value);
+        Console.WriteLine(Hashing.Sha256Hash(value));
 
+        value = "hi im a new diferent secret message from some othert place";
         Console.WriteLine(value);
         Console.WriteLine(Hashing.Sha256Hash(value));
     }
