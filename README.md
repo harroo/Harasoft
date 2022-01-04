@@ -67,3 +67,23 @@ byte[] data = Serialization.Serialize(className);
 ClassName className = (ClassName)Serialization.Deserialize(data);
 ```
 Works with ANYthing.
+
+## `Harasoft.Encryption`
+Keys must be 16 Characters; 128 bit.
+Must be encrypted and decrypted with the same Key.
+```cs
+// To Encrypt a buffer.
+byte[] encryptedData = Encryption.Encrypt(data, "coolkey012345678");
+
+// To Decrypt a buffer.
+byte[] decryptedData = Encryption.Decrypt(data, "coolkey012345678");
+```
+
+## `Harasoft.Hashing`
+```cs
+// String value to hash.
+string value = "mypassword";
+
+// Hashes the String.
+string hash = Hashing.Sha256Hash(value);
+```
