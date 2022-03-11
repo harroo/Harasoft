@@ -87,3 +87,14 @@ string value = "mypassword";
 // Hashes the String.
 string hash = Hashing.Sha256Hash(value);
 ```
+
+## `Harasoft.Net.Image`
+```cs
+// Download Image-Data.
+Net.Image.Download("my_url", OnDownload);
+
+public static void OnDownload (byte[] data) {
+
+    // .. Do something with the Image-Data .. //
+}
+```
