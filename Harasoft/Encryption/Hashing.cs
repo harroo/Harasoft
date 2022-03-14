@@ -18,5 +18,17 @@ namespace Harasoft {
 
             return stringBuilder.ToString();
         }
+
+        public static string Sha256Hash (byte[] input) {
+
+            HashAlgorithm algorithm = SHA256.Create();
+            byte[] hashedData = algorithm.ComputeHash(input);
+
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (byte b in hashedData)
+                stringBuilder.Append(b.ToString("X2"));
+
+            return stringBuilder.ToString();
+        }
     }
 }

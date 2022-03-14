@@ -84,7 +84,7 @@ byte[] decryptedData = Encryption.Decrypt(data, "coolkey012345678");
 // String value to hash.
 string value = "mypassword";
 
-// Hashes the String.
+// Hashes the String, input-value can also be of type byte[].
 string hash = Hashing.Sha256Hash(value);
 ```
 
